@@ -1,6 +1,6 @@
 
 /*! Hammer.JS - v2.0.4 - 2014-09-28
- * http://hammerjs.github.io/
+ * https://hammerjs.github.io/
  *
  * Copyright (c) 2014 Jorik Tangelder;
  * Licensed under the MIT license */
@@ -2461,7 +2461,7 @@ if (typeof module != 'undefined' && module.exports) {
 
 /* ========================================================================
  * Bootstrap: carousel.js v3.3.5
- * http://getbootstrap.com/javascript/#carousel
+ * https://getbootstrap.com/javascript/#carousel
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -2699,7 +2699,7 @@ if (typeof module != 'undefined' && module.exports) {
 
 /* ========================================================================
  * Bootstrap: transition.js v3.3.5
- * http://getbootstrap.com/javascript/#transitions
+ * https://getbootstrap.com/javascript/#transitions
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -2709,7 +2709,7 @@ if (typeof module != 'undefined' && module.exports) {
 +function ($) {
   'use strict';
 
-  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
+  // CSS TRANSITION SUPPORT (Shoutout: https://www.modernizr.com/)
   // ============================================================
 
   function transitionEnd() {
@@ -2731,7 +2731,7 @@ if (typeof module != 'undefined' && module.exports) {
     return false // explicit for ie8 (  ._.)
   }
 
-  // http://blog.alexmaccaw.com/css-transitions
+  // https://blog.alexmaccaw.com/css-transitions
   $.fn.emulateTransitionEnd = function (duration) {
     var called = false
     var $el = this
