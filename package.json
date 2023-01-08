@@ -1,0 +1,30 @@
+{
+  "name": "kehoa-www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kingswood-Estates-HOA/kehoa-www.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kingswood-Estates-HOA/kehoa-www/issues"
+  },
+  "homepage": "https://github.com/Kingswood-Estates-HOA/kehoa-www#readme",
+  "devDependencies": {
+    "sass": "^1.57.1",
+    "vite": "^4.0.4",
+    "vite-plugin-handlebars": "^1.6.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3"
+  }
+}

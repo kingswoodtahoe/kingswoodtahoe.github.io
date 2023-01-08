@@ -1,0 +1,23 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>
+    {{#if title}}
+    {{title}}
+    |
+    {{/if}}
+    Kingswood Estates HOA
+  </title>
+  {{#> head-block}}
+  {{/head-block}}
+</head>
+
+<body>
+  {{#> body-block}}
+  {{/body-block}}
+  <script type="module" src="{{resolve-from-root 'js/main.js'}}"></script>
+</body>
+
+</html>
