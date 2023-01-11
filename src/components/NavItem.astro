@@ -1,0 +1,23 @@
+---
+interface Props {
+  label: string;
+  href: string;
+}
+
+const { label, href } = Astro.props;
+const selectedPath = Astro.url.pathname;
+---
+
+<style>
+  li:hover {
+    background-color: #eee;
+    border-radius: 20px;
+  }
+</style>
+<li class="nav-item">
+  <a
+    href={href}
+    class:list={["nav-link", "link-dark", { "fw-bold": href === selectedPath }]}
+    aria-current="page">{label}</a
+  >
+</li>

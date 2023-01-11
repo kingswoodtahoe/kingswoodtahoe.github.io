@@ -1,0 +1,76 @@
+---
+import "bootstrap/scss/bootstrap.scss";
+import NavItem from "../components/NavItem.astro";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {title && `${title} | `}Kingswood Estates HOA
+    </title>
+  </head>
+
+  <body>
+    <div class="container-lg">
+      <header
+        class="py-2 d-flex flex-wrap align-items-center justify-content-center justify-content-sm-between"
+      >
+        <a href="/" class="d-flex text-dark text-decoration-none pe-4">
+          {/* Logo */}
+          <div class="d-flex flex-column">
+            <span
+              style="font-family: georgia pro, georgia, serif; font-size: 32px"
+              >K<span style="position: relative; left: -1px; top: 5px;">E</span>
+            </span><span
+              style="font-variant: small-caps; font-family: georgia pro, georgia, serif; font-size: 14px; margin-top: -9px; letter-spacing: 3px; position: relative; left: 3px;"
+              >HOA</span
+            >
+          </div>
+        </a>
+        <ul
+          class="nav nav-pills flex-grow-1 flex-sm-grow-0"
+          style="justify-content: space-evenly"
+        >
+          <NavItem label="Home" href="/" />
+          <NavItem label="Documents" href="/documents" />
+          <NavItem label="Local Links" href="/local-links" />
+          <NavItem label="Board" href="/board" />
+          <NavItem label="Contact" href="/contact" />
+        </ul>
+      </header>
+      <slot />
+      <footer class="pt-5 my-5 border-top">
+        <div class="row justify-content-around align-items-center text-center">
+          <div class="col-sm">
+            <ul class="list-unstyled">
+              <li class="text-muted">PO Box 1215</li>
+              <li class="text-muted">Kings Beach, CA 96143</li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <p class="text-muted">(530) 546-5913​</p>
+          </div>
+          <div class="col-sm">
+            <p class="text-muted">
+              <a
+                class="link-secondary text-decoration-none"
+                href="mailto:info@kehoa.net">info@kehoa.net</a
+              >
+            </p>
+          </div>
+          <div class="col-sm">
+            <p class="text-muted">© 2014-2023</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

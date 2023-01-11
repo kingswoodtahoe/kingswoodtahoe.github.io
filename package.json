@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "vite",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "repository": {
     "type": "git",
@@ -18,13 +20,10 @@
     "url": "https://github.com/Kingswood-Estates-HOA/kehoa-www/issues"
   },
   "homepage": "https://github.com/Kingswood-Estates-HOA/kehoa-www#readme",
-  "devDependencies": {
-    "sass": "^1.57.1",
-    "vite": "^4.0.4",
-    "vite-plugin-handlebars": "^1.6.0"
-  },
   "dependencies": {
+    "astro": "^1.9.1",
     "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "sass": "^1.57.1"
   }
 }

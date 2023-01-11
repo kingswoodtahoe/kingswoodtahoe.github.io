@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="row">
+    <div class="col px-0 position-relative">
+      <div
+        class="h-100 afsa"
+        style="
+            /* use padding to reserve minimum vertical space */
+            padding-top: 27%;
+          "
+      >
+        <div
+          style="
+          background-image: url('/img/splash2.jpg');
+          position: absolute;
+          width: 100%;
+          min-height: 100%;
+          top: 0;
+          left: 0;
+          background-size: cover;
+          background-position: center bottom;
+          overflow: hidden;
+        "
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <h1 class="py-4" style="text-align: center">
+      <div class="d-flex flex-column align-items-center">
+        <span
+          style="
+            font-family: georgia pro, georgia, serif; 
+            font-size: 64px
+          "
+          >Kingswood Estates</span
+        >
+        <span
+          style="
+            position: relative;
+            left: 3px;
+            font-family: georgia pro, georgia, serif;
+            font-size: 28px;
+            font-variant: small-caps;
+            letter-spacing: 3px;
+            display: inline-block;
+            margin-top: 2px;
+            margin-bottom: 6px;
+            /* use margin to wrap at the same width as ``Kingswood`` */
+            margin-left: 75px;
+            margin-right: 75px;
+          "
+        >
+          Homeowner's Association
+        </span>
+        <div style="border-bottom: 1px solid black; width: 28%"></div>
+      </div>
+    </h1>
+  </div>
+  <div class="row justify-content-center pt-4">
+    <p class="col-8 lead">
+      We are a single-family residential community located in the beautiful Lake
+      Tahoe area. Please use this website to answer questions regarding our
+      homeowners association.
+    </p>
+  </div>
+</BaseLayout>
