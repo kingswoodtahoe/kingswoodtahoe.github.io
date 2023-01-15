@@ -1,0 +1,44 @@
+---
+/**
+ * Renders nothing if the href'd file doesn't exist.
+ */
+
+interface Props {
+  children: string;
+  href: string;
+}
+const { href } = Astro.props;
+
+import { resolve } from "path";
+import { existsSync } from "fs";
+import { fileURLToPath } from "url";
+
+/**
+ * Assumes href is an absolute path to a file in the public/ directory.
+ */
+function resolveHref(href) {
+  return resolve(fileURLToPath(import.meta.url), `../../../public${href}`);
+}
+---
+
+<style>
+  a {
+    position: relative;
+    margin-left: 1.5em;
+  }
+  a:before {
+    content: "📄";
+    display: inline-block;
+    /* Use absolute positioning to work around whitespace quirk with slots */
+    position: absolute;
+    left: -1.5em;
+    margin-right: 0.2em;
+  }
+</style>
+{
+  existsSync(resolveHref(href)) ? (
+    <a href={href}>
+      <slot />
+    </a>
+  ) : null
+}
