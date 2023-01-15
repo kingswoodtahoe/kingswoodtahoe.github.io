@@ -40,5 +40,7 @@ function resolveHref(href) {
     <a href={href}>
       <slot />
     </a>
-  ) : null
+  ) : (
+    <span>&mdash;</span>
+  )
 }

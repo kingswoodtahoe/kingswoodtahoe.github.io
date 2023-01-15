@@ -1,5 +1,4 @@
 ---
-// layout: ../layouts/BaseLayout.astro
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MaybeDownloadLink from "../components/MaybeDownloadLink.astro";
 import { range } from "range";
@@ -13,7 +12,7 @@ const currentYear = new Date().getFullYear();
   }
   li {
     list-style-type: none;
-    padding-bottom: 0.2em;
+    padding-bottom: 0.4em;
   }
   li a:before {
     content: "📄";
@@ -29,7 +28,7 @@ const currentYear = new Date().getFullYear();
   <div class="container-sm">
     <div class="row">
       <div class="col px-4">
-        <h1 class="pt-4 pt-sm-5 display-4">HOA Documents</h1>
+        <h1 class="pb-2 pt-4 pt-sm-5 display-4">HOA Documents</h1>
         <ul class="px-0">
           <li>
             <a href="/docs/current/2022_insurance_summary.pdf"
