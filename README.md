@@ -9,7 +9,7 @@
 ## Stack
 
 ### Dev Env + Build
-[Astro](https://astro.build/)
+[Astro](https://astro.build/) - Handles templating, includes, and asset bundling.
 
 ### Design System
 [Bootstrap](https://getbootstrap.com/docs/), including the webfont version of [Bootstrap Icons](https://icons.getbootstrap.com/#icons).
