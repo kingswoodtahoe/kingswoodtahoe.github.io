@@ -26,6 +26,7 @@
     "@types/node": "^18.11.18",
     "astro": "^1.9.1",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
     "range": "^0.0.3",
     "sass": "^1.57.1"
   }

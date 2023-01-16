@@ -76,29 +76,49 @@ const currentYear = new Date().getFullYear();
     </div>
     <slot />
     <div class="container-lg">
-      <footer class="pt-5 my-5 border-top">
-        <div class="row justify-content-around align-items-center text-center">
-          <div class="col-sm">
-            <ul class="list-unstyled">
-              <li class="text-muted">PO Box 1215</li>
-              <li class="text-muted">Kings Beach, CA 96143</li>
-            </ul>
-          </div>
-          <div class="col-sm">
-            <p class="text-muted">(530) 546-5913​</p>
-          </div>
-          <div class="col-sm">
-            <p class="text-muted">
+      <footer class="pt-4 px-5 my-5 border-top text-muted">
+        <div
+          class="mx-auto d-flex flex-column flex-sm-row flex-wrap justify-content-between px-1"
+          style="max-width: 800px; row-gap: 1em; column-gap: 3em;"
+        >
+          <div class="">
+            <a
+              class="link-secondary text-decoration-none"
+              href="mailto:info@kingswoodtahoe.org"
+            >
+              <i class="bi-envelope-at"></i>
+              info@kingswoodtahoe.org</a
+            >
+            <div>
               <a
                 class="link-secondary text-decoration-none"
-                href="mailto:info@kingswoodtahoe.org">info@kingswoodtahoe.org</a
+                href="tel:530-546-5913"
               >
-            </p>
+                <i class="bi-telephone"></i>
+                (530) 546-5913​</a
+              >
+            </div>
+            <div class="">© 2014-{currentYear}</div>
           </div>
-          <div class="col-sm">
-            <p class="text-muted">© 2014-{currentYear}</p>
+          <div class="d-flex">
+            <i class="bi-envelope-paper pe-1"></i>
+            <div translate="no">
+              Kingswood Estates HOA<br />
+              PO Box 1215<br />
+              Kings Beach, CA 96143
+            </div>
+          </div>
+          <div>
+            <a
+              href="https://github.com/kingswoodtahoe/kingswoodtahoe.github.io"
+              class="link-secondary text-decoration-none"
+            >
+              <i class="bi-github"></i>
+              Contribute
+            </a>
           </div>
         </div>
+        <div class="text-center pt-5">🌲🌲🌲</div>
       </footer>
     </div>
   </body>
