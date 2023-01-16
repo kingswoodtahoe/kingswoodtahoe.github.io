@@ -1,14 +1,3 @@
 {
-  "html.autoClosingTags": false,
-  "html.format.indentHandlebars": true,
-  "html.format.preserveNewLines": false,
-  "html.format.wrapAttributes": "force-expand-multiline",
-  "files.associations": {
-    "*.html": "handlebars"
-  },
-  "[handlebars]": {
-    "editor.formatOnSaveMode": "file",
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
   "editor.tabSize": 2
 }
