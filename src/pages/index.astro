@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="container-md">
+    <div class="row">
+      <div class="col">
+        <h1 class="py-4 px-4 display-1 text-center">
+          <div class="d-flex flex-column align-items-center">
+            <span class="display-1">Kingswood Estates</span>
+            <small
+              class="display-2 pt-1 pb-2 /* use margin and padding to wrap at the same width as ``Kingswood`` */ px-5"
+              style="
+              letter-spacing: 3px;
+              font-size: 45%;
+              font-variant: small-caps;
+            "
+            >
+              Homeowner's Association
+            </small>
+            <div style="border-bottom: 1px solid black; width: 28%"></div>
+          </div>
+        </h1>
+      </div>
+    </div>
+    <div class="row justify-content-center pt-4">
+      <p class="col col-sm-9 px-5 px-sm-0 pb-sm-5 lead">
+        We are a single-family residential community located in the beautiful
+        Lake Tahoe area. Please use this website to answer questions regarding
+        our homeowners association.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

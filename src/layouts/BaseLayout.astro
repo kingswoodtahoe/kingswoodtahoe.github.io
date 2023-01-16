@@ -1,0 +1,125 @@
+---
+import "./layout.scss";
+import NavItem from "../components/NavItem.astro";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+const currentYear = new Date().getFullYear();
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {title && `${title} | `}Kingswood Estates HOA
+    </title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <header
+        class="py-2 d-flex flex-wrap align-items-center justify-content-center justify-content-sm-between"
+      >
+        <a href="/" class="d-flex text-dark text-decoration-none pe-4">
+          {/* Logo */}
+          <div class="d-flex flex-column">
+            <span
+              style="font-family: georgia pro, georgia, serif; font-size: 32px"
+              >K<span style="position: relative; left: -1px; top: 5px;">E</span>
+            </span><span
+              style="font-variant: small-caps; font-family: georgia pro, georgia, serif; font-size: 14px; margin-top: -9px; letter-spacing: 3px; position: relative; left: 3px;"
+              >HOA</span
+            >
+          </div>
+        </a>
+        <ul
+          class="nav nav-pills flex-grow-1 flex-sm-grow-0"
+          style="justify-content: space-evenly"
+        >
+          <NavItem label="Home" href="/" />
+          <NavItem label="Documents" href="/documents" />
+          <NavItem label="Local Links" href="/local-links" />
+          <NavItem label="Board" href="/board" />
+          <NavItem label="Contact" href="/contact" />
+        </ul>
+      </header>
+      <div class="row">
+        <div class="col px-0 position-relative">
+          <div
+            class="h-100 afsa"
+            style="
+            /* use padding to reserve minimum vertical space */
+            padding-top: 27%;
+          "
+          >
+            <div
+              style="
+                background-image: url('/img/splash2.jpg');
+                position: absolute;
+                width: 100%;
+                min-height: 100%;
+                top: 0;
+                left: 0;
+                background-size: cover;
+                background-position: center bottom;
+                overflow: hidden;
+              "
+            >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <slot />
+    <div class="container-fluid">
+      <footer class="pt-4 px-5 my-5 border-top text-muted">
+        <div
+          class="mx-auto d-flex flex-column flex-sm-row flex-wrap justify-content-between px-1"
+          style="max-width: 800px; row-gap: 1em; column-gap: 3em;"
+        >
+          <div class="">
+            <a
+              class="link-secondary text-decoration-none"
+              href="mailto:info@kingswoodtahoe.org"
+            >
+              <i class="bi-envelope-at"></i>
+              info@kingswoodtahoe.org</a
+            >
+            <div>
+              <a
+                class="link-secondary text-decoration-none"
+                href="tel:530-546-5913"
+              >
+                <i class="bi-telephone"></i>
+                (530) 546-5913​</a
+              >
+            </div>
+            <div class="">© 2014-{currentYear}</div>
+          </div>
+          <div class="d-flex">
+            <i class="bi-envelope-paper pe-1"></i>
+            <div translate="no">
+              Kingswood Estates HOA<br />
+              PO Box 1215<br />
+              Kings Beach, CA 96143
+            </div>
+          </div>
+          <div>
+            <a
+              href="https://github.com/kingswoodtahoe/kingswoodtahoe.github.io"
+              class="link-secondary text-decoration-none"
+            >
+              <i class="bi-github"></i>
+              Contribute
+            </a>
+          </div>
+        </div>
+        <div class="text-center pt-5">🌲🌲🌲</div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "kehoa-www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kingswood-Estates-HOA/kehoa-www.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kingswood-Estates-HOA/kehoa-www/issues"
+  },
+  "homepage": "https://github.com/Kingswood-Estates-HOA/kehoa-www#readme",
+  "dependencies": {
+    "@astrojs/mdx": "^0.14.0",
+    "@popperjs/core": "^2.11.6",
+    "@types/node": "^18.11.18",
+    "astro": "^1.9.1",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
+    "range": "^0.0.3",
+    "sass": "^1.57.1"
+  }
+}
