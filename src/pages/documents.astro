@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import ContentLayout from "../layouts/ContentLayout.astro";
 import MaybeDownloadLink from "../components/MaybeDownloadLink.astro";
 import { range } from "range";
 
@@ -24,91 +24,81 @@ const currentYear = new Date().getFullYear();
   }
 </style>
 
-<BaseLayout>
-  <div class="container-sm">
-    <div class="row">
-      <div class="col px-4">
-        <h1 class="pb-2 pt-4 pt-sm-5 display-4">HOA Documents</h1>
-        <ul class="px-0">
-          <li>
-            <a href="/docs/current/2022_insurance_summary.pdf"
-              >Insurance Disclosure Statement</a
-            >
-          </li><li>
-            <a href="/docs/current/2019_collection_policy.pdf"
-              >Assessment Collection Policy</a
-            >
-          </li><li>
-            <a href="/docs/current/fine_schedule_and_policy.pdf"
-              >Fines &amp; Enforcement Policy</a
-            >
-          </li><li>
-            <a href="/docs/current/formal_complaint_process_2014.pdf"
-              >Formal Complaint Process</a
-            >
-          </li><li>
-            <a href="/docs/current/architectural_review_form_2014.pdf"
-              >Architectural Review Form</a
-            >
-          </li><li>
-            <a href="/docs/current/2022_spring_newsletter.pdf">Newsletter</a>
-          </li><li>
-            <a href="/docs/current/cc_rs_2014.pdf">CC &amp; R's</a>
-          </li><li>
-            <a href="/docs/current/2019_annual_disclosure_summary.pdf"
-              >Disclosures</a
-            >
-          </li><li>
-            <a href="/docs/current/election_rules.pdf">Election Rules</a>
-          </li>
-        </ul>
+<ContentLayout>
+  <h1 class="pb-2 pt-4 pt-sm-5 display-4">HOA Documents</h1>
+  <ul class="px-0">
+    <li>
+      <a href="/docs/current/2022_insurance_summary.pdf"
+        >Insurance Disclosure Statement</a
+      >
+    </li><li>
+      <a href="/docs/current/2019_collection_policy.pdf"
+        >Assessment Collection Policy</a
+      >
+    </li><li>
+      <a href="/docs/current/fine_schedule_and_policy.pdf"
+        >Fines &amp; Enforcement Policy</a
+      >
+    </li><li>
+      <a href="/docs/current/formal_complaint_process_2014.pdf"
+        >Formal Complaint Process</a
+      >
+    </li><li>
+      <a href="/docs/current/architectural_review_form_2014.pdf"
+        >Architectural Review Form</a
+      >
+    </li><li>
+      <a href="/docs/current/2022_spring_newsletter.pdf">Newsletter</a>
+    </li><li>
+      <a href="/docs/current/cc_rs_2014.pdf">CC &amp; R's</a>
+    </li><li>
+      <a href="/docs/current/2019_annual_disclosure_summary.pdf">Disclosures</a>
+    </li><li>
+      <a href="/docs/current/election_rules.pdf">Election Rules</a>
+    </li>
+  </ul>
 
-        <h2 id="archive" class="pt-4">Archive</h2>
+  <h2 id="archive" class="pt-4">Archive</h2>
 
-        <table>
-          {
-            range(currentYear, 2014, -1).map((year, idx) => (
-              <>
-                <tr>
-                  <th class:list={{ "pt-4": idx > 0 }}>
-                    <h3>{year}</h3>
-                  </th>
-                </tr>
-                <tr>
-                  <td class="pe-4 d-block d-sm-table-cell">
-                    <MaybeDownloadLink
-                      href={`/docs/archive/${year}_annual_meeting_minutes.pdf`}
-                    >
-                      Minutes
-                    </MaybeDownloadLink>
-                  </td>
-                  <td class="pe-4 d-block d-sm-table-cell">
-                    <MaybeDownloadLink
-                      href={`/docs/archive/${year}_budget.pdf`}
-                    >
-                      Budget
-                    </MaybeDownloadLink>
-                  </td>
-                  <td class="d-block d-sm-table-cell">
-                    <div class="d-flex flex-column">
-                      <MaybeDownloadLink
-                        href={`/docs/archive/${year}-06_financial_statement.pdf`}
-                      >
-                        June Financial Statement
-                      </MaybeDownloadLink>
-                      <MaybeDownloadLink
-                        href={`/docs/archive/${year}-12_financial_statement.pdf`}
-                      >
-                        December Financial Statement
-                      </MaybeDownloadLink>
-                    </div>
-                  </td>
-                </tr>
-              </>
-            ))
-          }
-        </table>
-      </div>
-    </div>
-  </div>
-</BaseLayout>
+  <table>
+    {
+      range(currentYear, 2014, -1).map((year, idx) => (
+        <>
+          <tr>
+            <th class:list={{ "pt-4": idx > 0 }}>
+              <h3>{year}</h3>
+            </th>
+          </tr>
+          <tr>
+            <td class="pe-4 d-block d-sm-table-cell">
+              <MaybeDownloadLink
+                href={`/docs/archive/${year}_annual_meeting_minutes.pdf`}
+              >
+                Minutes
+              </MaybeDownloadLink>
+            </td>
+            <td class="pe-4 d-block d-sm-table-cell">
+              <MaybeDownloadLink href={`/docs/archive/${year}_budget.pdf`}>
+                Budget
+              </MaybeDownloadLink>
+            </td>
+            <td class="d-block d-sm-table-cell">
+              <div class="d-flex flex-column">
+                <MaybeDownloadLink
+                  href={`/docs/archive/${year}-06_financial_statement.pdf`}
+                >
+                  June Financial Statement
+                </MaybeDownloadLink>
+                <MaybeDownloadLink
+                  href={`/docs/archive/${year}-12_financial_statement.pdf`}
+                >
+                  December Financial Statement
+                </MaybeDownloadLink>
+              </div>
+            </td>
+          </tr>
+        </>
+      ))
+    }
+  </table>
+</ContentLayout>
