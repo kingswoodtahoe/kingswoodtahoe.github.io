@@ -12,7 +12,7 @@
 [Astro](https://astro.build/)
 
 ### Design System
-Bootstrap
+[Bootstrap](https://getbootstrap.com/docs/), including the webfont version of [Bootstrap Icons](https://icons.getbootstrap.com/#icons).
 
 ### Deployment & Hosting
-Github Actions + Pages
+[GitHub Actions](https://docs.astro.build/en/guides/deploy/github/) build and deploy any commits to the `main` branch to [GitHub Pages](https://pages.github.com/).
