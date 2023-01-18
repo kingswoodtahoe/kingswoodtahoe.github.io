@@ -9,16 +9,28 @@ interface Props {
 }
 const { href } = Astro.props;
 
-import { resolve } from "path";
-import { existsSync } from "fs";
+import { resolve, dirname } from "path";
+import fs from "fs";
 import { fileURLToPath } from "url";
+const {
+  promises: { access },
+} = fs;
 
 /**
  * Assumes href is an absolute path to a file in the public/ directory.
+ * Relies on `atro` commands being run from the repo root.
+ * I'd rather use `import.meta.url`, but this is broken:
+ * https://github.com/withastro/astro/issues/5438
  */
 function resolveHref(href) {
-  return resolve(fileURLToPath(import.meta.url), `../../../public${href}`);
+  return resolve(`public${href}`);
 }
+
+let exists = false;
+try {
+  await access(resolveHref(href));
+  exists = true;
+} catch (err) {}
 ---
 
 <style>
@@ -36,7 +48,7 @@ function resolveHref(href) {
   }
 </style>
 {
-  existsSync(resolveHref(href)) ? (
+  exists ? (
     <a href={href}>
       <slot />
     </a>
