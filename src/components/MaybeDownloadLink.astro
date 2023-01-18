@@ -9,9 +9,8 @@ interface Props {
 }
 const { href } = Astro.props;
 
-import { resolve, dirname } from "path";
+import { resolve } from "path";
 import fs from "fs";
-import { fileURLToPath } from "url";
 const {
   promises: { access },
 } = fs;
