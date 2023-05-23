@@ -1,6 +1,7 @@
 ---
 import "./layout.scss";
 import NavItem from "../components/NavItem.astro";
+import Banner from "../components/Banner";
 
 interface Props {
   title?: string;
@@ -20,6 +21,12 @@ const currentYear = new Date().getFullYear();
   </head>
 
   <body>
+    {/* Banners go here */}
+    <Banner client:only showAfter="2023-05-20" hideAfter="2023-06-04">
+      <i class="bi-calendar-check pe-1"></i>
+      <b>Pine needle dumpsters are confirmed!</b><br />8am Saturday 5/27 though
+      7pm Sunday 5/28 at 1015 Trent Ln and 7475 Kingswood Drive.
+    </Banner>
     <div class="container-fluid">
       <header
         class="py-2 d-flex flex-wrap align-items-center justify-content-center justify-content-sm-between"

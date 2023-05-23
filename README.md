@@ -10,6 +10,7 @@
 
 ### Dev Env + Build
 [Astro](https://astro.build/) - Handles templating, includes, and asset bundling.
+[React](https://react.dev/) is integrated for client-side JS.
 
 ### Design System
 [Bootstrap](https://getbootstrap.com/docs/), including the webfont version of [Bootstrap Icons](https://icons.getbootstrap.com/#icons).
