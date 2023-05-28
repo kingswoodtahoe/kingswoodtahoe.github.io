@@ -1,0 +1,27 @@
+---
+type Props = Readonly<{
+  images: ReadonlyArray<
+    Readonly<{
+      src: string;
+    }>
+  >;
+}>;
+const { images } = Astro.props;
+---
+
+<style>
+  .grid {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+</style>
+<div class="grid my-2">
+  {
+    images.map(({ src }) => (
+      <div>
+        <img class="img-fluid rounded" src={src} />
+      </div>
+    ))
+  }
+</div>

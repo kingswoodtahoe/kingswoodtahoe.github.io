@@ -1,5 +1,6 @@
 ---
 import ImageCarousel from "../components/ImageCarousel.astro";
+import ImageGallery from "../components/ImageGallery.astro";
 import ContentLayout from "../layouts/ContentLayout.astro";
 ---
 
@@ -8,9 +9,8 @@ import ContentLayout from "../layouts/ContentLayout.astro";
   neighbors clean our community and prevent the spread of wildfire. Thanks to
   all that took part in this important event!
   <div class="pt-2">
-    <ImageCarousel
-      id="cleanup_photos"
-      slides={[
+    <ImageGallery
+      images={[
         { src: "/img/events/2023_cleanup/5525.jpg" },
         { src: "/img/events/2023_cleanup/5521.jpg" },
         { src: "/img/events/2023_cleanup/5519.jpg" },
