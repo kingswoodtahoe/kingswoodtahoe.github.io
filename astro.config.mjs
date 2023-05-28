@@ -14,12 +14,18 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx(), compress({
-    html: {
-      // Avoid problems with proxies
-      // https://stackoverflow.com/a/32684034
-      maxLineLength: 500
-    }
-  }), purgecss(), react()],
-  site: "https://kingswoodtahoe.org"
+  integrations: [
+    mdx(),
+    react(),
+    // Keep compress & purgecss last
+    purgecss(),
+    compress({
+      html: {
+        // Avoid problems with proxies
+        // https://stackoverflow.com/a/32684034
+        maxLineLength: 500,
+      },
+    }),
+  ],
+  site: "https://kingswoodtahoe.org",
 });
