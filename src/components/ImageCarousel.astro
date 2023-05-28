@@ -1,0 +1,72 @@
+---
+/**
+ * Derived from https://github.com/astro-bootstrap/ which isn't working yet
+ */
+
+interface Props {
+  id: string;
+  slides: ReadonlyArray<
+    Readonly<{
+      src: string;
+    }>
+  >;
+}
+
+const { id } = Astro.props;
+const slides = Astro.props.slides.map((slide, index) => ({
+  ...slide,
+  active: index === 0,
+}));
+---
+
+<div id={id} class:list={["carousel", "slide"]} data-bs-ride="carousel">
+  {/* Indicators */}
+  <div class="carousel-indicators">
+    {
+      slides.map(({ active }, index: number) => {
+        const ariaCurrent = active ? "page" : undefined;
+        return (
+          <button
+            type="button"
+            data-bs-target={`#${id}`}
+            data-bs-slide-to={index}
+            class:list={[{ active }]}
+            aria-current={ariaCurrent}
+          />
+        );
+      })
+    }
+  </div>
+
+  {/* Inner */}
+  <div class="carousel-inner">
+    {
+      slides.map(({ active, src }) => (
+        <div class:list={["carousel-item", { active }]}>
+          <img src={src} class="d-block w-100 img-fluid" />
+        </div>
+      ))
+    }
+  </div>
+
+  {/* Controls */}
+  {
+    ["next", "prev"].map((direction) => (
+      <button
+        class={`carousel-control-${direction}`}
+        type="button"
+        data-bs-target={`#${id}`}
+        data-bs-slide={direction}
+      >
+        <span class={`carousel-control-${direction}-icon`} aria-hidden="true" />
+        <span class="visually-hidden">
+          {direction === "prev" ? "Previous" : "Next"}
+        </span>
+      </button>
+    ))
+  }
+</div>
+
+<script>
+  import "bootstrap/js/dist/carousel";
+</script>

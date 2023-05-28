@@ -1,0 +1,24 @@
+---
+import ImageCarousel from "../components/ImageCarousel.astro";
+import ContentLayout from "../layouts/ContentLayout.astro";
+---
+
+<ContentLayout>
+  <h2 class="pt-4 pt-sm-5 h2">Annual Homeowner Cleanup</h2>Neighbors helped
+  neighbors clean our community and prevent the spread of wildfire. Thanks to
+  all that took part in this important event!
+  <div class="pt-2">
+    <ImageCarousel
+      id="cleanup_photos"
+      slides={[
+        { src: "/img/events/2023_cleanup/5525.jpg" },
+        { src: "/img/events/2023_cleanup/5521.jpg" },
+        { src: "/img/events/2023_cleanup/5519.jpg" },
+      ]}
+    />
+  </div>
+
+  <h2 class="pt-4 pt-sm-5 h2">Annual Meeting</h2>Held in town each summer. Check
+  the
+  <a href="/documents" target="_blank">newsletter</a> for details!
+</ContentLayout>
