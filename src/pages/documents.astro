@@ -124,9 +124,16 @@ const currentYear = new Date().getFullYear();
               </MaybeDownloadLink>
             </td>
             <td class="pe-4 d-block d-sm-table-cell">
-              <MaybeDownloadLink href={`/docs/archive/${year}_budget.pdf`}>
-                Budget
-              </MaybeDownloadLink>
+              <div class="d-flex flex-column">
+                <MaybeDownloadLink href={`/docs/archive/${year}_budget.pdf`}>
+                  Budget
+                </MaybeDownloadLink>
+                <MaybeDownloadLink
+                  href={`/docs/archive/${year}_budget_to_actual.pdf`}
+                >
+                  Budget to Actual
+                </MaybeDownloadLink>
+              </div>
             </td>
             <td class="d-block d-sm-table-cell">
               <div class="d-flex flex-column">
