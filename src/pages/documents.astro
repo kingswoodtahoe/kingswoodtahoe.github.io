@@ -1,6 +1,7 @@
 ---
 import ContentLayout from "../layouts/ContentLayout.astro";
 import MaybeDownloadLink from "../components/MaybeDownloadLink.astro";
+import MapLink from "../components/MapLink.astro";
 import { range } from "range";
 
 const currentYear = new Date().getFullYear();
@@ -104,7 +105,64 @@ const currentYear = new Date().getFullYear();
     </li>
   </ul>
 
-  <h2 id="archive" class="pt-4">Archive</h2>
+  <h3>Maps</h3>
+  <ul class="px-0">
+    <li>
+      <MapLink
+        href="http://maps.placer.ca.gov/Html5viewer/Index.html?configBase=http://arcgis/Geocortex/Essentials/REST/sites/LIS_Public/viewers/LIS_Base-Public/virtualdirectory/Resources/Config/Default"
+      >
+        County Interactive
+      </MapLink>
+    </li>
+    <li>
+      <MapLink href="/docs/maps/111_index.pdf">Neighborhood Overview</MapLink>
+    </li>
+  </ul>
+  <table>
+    <tr>
+      <td class="pe-4">
+        <MapLink href="/docs/maps/111-11.pdf">111-11</MapLink>
+      </td>
+      <td class="pe-4">
+        <MapLink href="/docs/maps/111-12.pdf">111-12</MapLink>
+      </td>
+      <td>
+        <MapLink href="/docs/maps/111-13.pdf">111-13</MapLink>
+      </td>
+    </tr>
+    <tr>
+      <td class="pe-4">
+        <MapLink href="/docs/maps/111-14.pdf">111-14</MapLink>
+      </td>
+      <td class="pe-4">
+        <MapLink href="/docs/maps/111-15.pdf">111-15</MapLink>
+      </td>
+      <td>
+        <MapLink href="/docs/maps/111-16.pdf">111-16</MapLink>
+      </td>
+    </tr>
+    <tr>
+      <td class="pe-4">
+        <MapLink href="/docs/maps/111-17.pdf">111-17</MapLink>
+      </td>
+      <td class="pe-4">
+        <MapLink href="/docs/maps/111-18.pdf">111-18</MapLink>
+      </td>
+      <td>
+        <MapLink href="/docs/maps/111-19.pdf">111-19</MapLink>
+      </td>
+    </tr>
+    <tr>
+      <td class="pe-4">
+        <MapLink href="/docs/maps/111-17.pdf">111-27</MapLink>
+      </td>
+      <td class="pe-4">
+        <MapLink href="/docs/maps/111-18.pdf">111-28</MapLink>
+      </td>
+    </tr>
+  </table>
+
+  <h2 id="archive" class="pt-5">Archive</h2>
 
   <table>
     {

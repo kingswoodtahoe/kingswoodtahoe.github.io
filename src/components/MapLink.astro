@@ -1,0 +1,25 @@
+---
+interface Props {
+  children: string;
+  href: string;
+}
+const { href } = Astro.props;
+---
+
+<style>
+  a {
+    position: relative;
+    margin-left: 1.5em;
+  }
+  .map {
+    display: inline-block;
+    /* Use absolute positioning to work around whitespace quirk with slots */
+    position: absolute;
+    left: -1.5em;
+    margin-right: 0.2em;
+  }
+</style>
+<a href={href} target="_blank">
+  <span class="map">🗺</span>
+  <slot />
+</a>
