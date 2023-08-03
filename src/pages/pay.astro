@@ -1,0 +1,24 @@
+---
+import ContentLayout from "../layouts/ContentLayout.astro";
+---
+
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+<ContentLayout>
+  <div class="mx-auto text-center pt-4">
+    {/* Use a fixed container size to minimize reflow as Stripe loads */}
+    <div style="min-height: 250px">
+      <stripe-buy-button
+        buy-button-id="buy_btn_1Nao1yJMc44opKPPSQ8jusYv"
+        publishable-key="pk_live_51NaYFEJMc44opKPP2tLS0JJZZNgDxcUufXfH7dbHpI7XvW72TPQGl7GFdXzEc3xt3qI1CTsdBjQNzHobVVK8DYV100WzcWGCCv"
+      >
+      </stripe-buy-button>
+    </div>
+    <p>
+      <small class="text-black-50">
+        Includes a 3% processing fee.<br />Please add the fee if you increase
+        the total to include late fees and past payments.</small
+      >
+    </p>
+  </div>
+</ContentLayout>
