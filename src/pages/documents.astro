@@ -188,11 +188,18 @@ const currentYear = new Date().getFullYear();
           </tr>
           <tr>
             <td class="pe-4 d-block d-sm-table-cell">
-              <MaybeDownloadLink
-                href={`/docs/archive/${year}_annual_meeting_minutes.pdf`}
-              >
-                Minutes
-              </MaybeDownloadLink>
+              <div class="d-flex flex-column">
+                <MaybeDownloadLink
+                  href={`/docs/archive/${year}_annual_meeting_agenda.pdf`}
+                >
+                  Annual Meeting Agenda
+                </MaybeDownloadLink>
+                <MaybeDownloadLink
+                  href={`/docs/archive/${year}_annual_meeting_minutes.pdf`}
+                >
+                  Annual Meeting Minutes
+                </MaybeDownloadLink>
+              </div>
             </td>
             <td class="pe-4 d-block d-sm-table-cell">
               <div class="d-flex flex-column">
