@@ -5,7 +5,22 @@ import ContentLayout from "../layouts/ContentLayout.astro";
 ---
 
 <ContentLayout>
-  <h2 class="pt-4 pt-sm-5 h2">Greenbelt Cleanup</h2>This summer we have been
+  <h2 class="pt-4 pt-sm-5 h2">Annual Meeting</h2>Held in town each summer. Check
+  the
+  <a href="/documents" target="_blank">newsletter</a> for details!
+
+  <h2 class="pt-4 pt-sm-5 h2">2024 Annual Homeowner Cleanup</h2>We added more bins this year with support 
+  from Firewise and the North Tahoe Fire District. Thanks to everyone who helped keep our neighborhood safe!
+  <div class="pt-2">
+    <ImageGallery
+      images={[
+        { src: "/img/events/2024_cleanup/1.jpg" },
+        { src: "/img/events/2024_cleanup/2.jpg" },
+      ]}
+    />
+  </div>
+
+  <h2 class="pt-4 pt-sm-5 h2">2023 Greenbelt Cleanup</h2>This summer we have been
   busy taking out dead and dying trees in 2 of our 4 greenbelts to help with
   fire protection, we hope all residents can help with defensible space on their
   properties, we are working on getting bins for pine needle cleanup again in
@@ -19,7 +34,7 @@ import ContentLayout from "../layouts/ContentLayout.astro";
     />
   </div>
 
-  <h2 class="pt-4 pt-sm-5 h2">Annual Homeowner Cleanup</h2>Neighbors helped
+  <h2 class="pt-4 pt-sm-5 h2">2023 Annual Homeowner Cleanup</h2>Neighbors helped
   neighbors clean our community and prevent the spread of wildfire. Thanks to
   all that took part in this important event!
   <div class="pt-2">
@@ -31,8 +46,4 @@ import ContentLayout from "../layouts/ContentLayout.astro";
       ]}
     />
   </div>
-
-  <h2 class="pt-4 pt-sm-5 h2">Annual Meeting</h2>Held in town each summer. Check
-  the
-  <a href="/documents" target="_blank">newsletter</a> for details!
 </ContentLayout>
