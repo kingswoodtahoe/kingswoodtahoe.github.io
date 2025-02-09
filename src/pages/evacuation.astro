@@ -1,0 +1,30 @@
+---
+import ContentLayout from "../layouts/ContentLayout.astro";
+---
+
+<style>
+  li {
+    padding-bottom: 0.4em;
+  }
+</style>
+<ContentLayout>
+  <h1 class="pb-2 pt-4 pt-sm-5 display-4">Evacuation</h1>
+  <ul class="px-4">
+    <li>
+      <a href="/docs/current/evacuation_plan.pdf">
+        Neighborhood Evacuation Plan
+      </a>
+    </li>
+    <li>
+      <a href="/docs/current/evacuation_map.pdf">
+        Neighborhood Evacuation Map
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.ready.gov/evacuation"
+        target="_blank">Ready.gov - Preparing for Evacuation</a
+      >
+    </li>
+  </ul>
+</ContentLayout>
